@@ -6,8 +6,8 @@
 
 ### 1. دانلود پروژه
 ```bash
-git clone https://github.com/نام-کاربری/نام-پروژه.git
-cd نام-پروژه
+git clone https://github.com/SaEeD802/Beharfim.git
+cd Beharfim
 ```
 
 ### 2. ایجاد محیط مجازی
