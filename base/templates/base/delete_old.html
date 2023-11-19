@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>مطمئنی که میخوای"{{ obj }}" رو پاک کنی؟</p>
+        
+        <a href="{{ request.META.HTTP_REFERER }}">بازگشت</a>
+        <input type="submit" value="تایید">
+    </form>
+
+{% endblock content %}

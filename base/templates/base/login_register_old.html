@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if page == 'login' %}
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <label>نام کاربری:</label>
+            <input type="text" name="username" placeholder="نام کاربری خود را وارد کنید">
+
+            <label>پسورد:</label>
+            <input type="password" name="password" placeholder="پسورد خود را وارد کنید">
+
+            <input type="submit" value="ورود">
+        </form>
+        <p>هنوز حساب ایجاد نکردی؟</p>
+        <a href="{% url 'register' %}">ساخت حساب</a>
+    </div>
+
+{% else %}
+
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="ساخت حساب">
+        </form>
+        <p>قبلا حساب ایجاد کردی؟</p>
+        <a href="{% url 'login' %}">ورود</a>
+    </div>
+
+{% endif %}    
+
+{% endblock %}
